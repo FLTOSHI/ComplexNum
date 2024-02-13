@@ -25,24 +25,24 @@ public class Complex {
         double sumImaginary = imaginary + other.imaginary;
         return new Complex(sumReal, sumImaginary);
     }
-    public Complex sub(Complex other) {
+    public Complex subdivide(Complex other) {
         double diffReal = real - other.real;
         double diffImaginary = imaginary - other.imaginary;
         return new Complex(diffReal, diffImaginary);
     }
 
-    public Complex mul(Complex other) {
+    public Complex multiply(Complex other) {
         double mulReal = (real * other.real) - (imaginary * other.imaginary);
         double mulImaginary = (real * other.imaginary) + (imaginary * other.real);
         return new Complex(mulReal, mulImaginary);
     }
-    public Complex div(Complex other) {
+    public Complex divide(Complex other) {
         double divReal = (real / other.real) - (imaginary / other.imaginary);
         double divImaginary = (real / other.imaginary) + (imaginary / other.real);
         return new Complex(divReal, divImaginary);
     }
 
-    public double getModulus() {
+    public double getModule() {
         return Math.sqrt(real * real + imaginary * imaginary);
     }
 
