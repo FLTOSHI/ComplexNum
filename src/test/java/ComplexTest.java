@@ -1,3 +1,4 @@
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -7,9 +8,9 @@ class ComplexTest {
     @Test
     void add() {
         Complex complex = new Complex();
-        Complex x = new Complex(2.5, 3.7);
-        Complex y = new Complex(1.8, 2.2);
-        Complex expected = new Complex(4.3, 5.9);
+        Complex x = new Complex(2, 3);
+        Complex y = new Complex(1, 2);
+        Complex expected = new Complex(3, 5);
         Complex sum = x.add(y);
         assertEquals(expected, sum);
 
@@ -18,9 +19,9 @@ class ComplexTest {
     @Test
     void subdivide() {
         Complex complex = new Complex();
-        Complex x = new Complex(2.5, 3.7);
-        Complex y = new Complex(1.8, 2.2);
-        Complex expected = new Complex(0.7, 1.5);
+        Complex x = new Complex(2, 3);
+        Complex y = new Complex(1, 2);
+        Complex expected = new Complex(1, 1);
         Complex diff = x.subdivide(y);
         assertEquals(expected, diff);
     }
@@ -28,9 +29,9 @@ class ComplexTest {
     @Test
     void multiply() {
         Complex complex = new Complex();
-        Complex x = new Complex(2.5, 3.7);
-        Complex y = new Complex(1.8, 2.2);
-        Complex expected = new Complex(-3.6400000000000006, 12.16);
+        Complex x = new Complex(5, 7);
+        Complex y = new Complex(8, 2);
+        Complex expected = new Complex(26, 66);
         Complex resultOne = x.multiply(y);
         assertEquals(expected, resultOne);
     }
@@ -42,7 +43,6 @@ class ComplexTest {
         Complex y = new Complex(1.8, 2.2);
         Complex expected = new Complex(-0.2929292929292928, 3.191919191919192);
         Complex resultTwo = x.divide(y);
-        assertEquals(expected, resultTwo);
-
+        Assertions.assertEquals(expected, resultTwo);
     }
 }

@@ -1,5 +1,5 @@
 public class Main {
-    public static void main(String[] args){
+    public static void main(String[] args) {
         Complex x = new Complex(2, 3);
         Complex y = new Complex(1, 2);
 
@@ -9,10 +9,10 @@ public class Main {
         Complex firstResult = x.multiply(x);
         Complex secondResult = x.divide(y);
 
-        System.out.println("Сумма двух комплексных чисел: " + sum);
-        System.out.println("Разность двух комплексных чисел: " + diff);
+        System.out.println("Сумма двух комплексных чисел: " + sum + "\n");
+        System.out.println("Разность двух комплексных чисел: " + diff + "\n");
 
-        System.out.println("Результат умножения комплексных чисел: " + firstResult);
+        System.out.println("Результат умножения комплексных чисел: " + firstResult + "\n");
         System.out.println("Результат деления комплексных чисел: " + secondResult);
 
         System.out.println("Модуль комплексного числа x: " + x.getModule());
@@ -22,8 +22,6 @@ public class Main {
             System.out.println("Комплексные числа явлюятся равными");
         } else {
             System.out.println("Комплексные числа не являются равными");
-
         }
-
     }
 }
